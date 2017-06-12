@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="mysql-connector-java-5.1.21.jar" />
+
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+		<commentGenerator>
+			<property name="suppressAllComments" value="false" />
+		</commentGenerator>
+
+		<!--数据库链接URL，用户名、密码 -->
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://172.28.3.21:3306/yybgrk-prod" userId="user_consumer"
+			password="123123">
+		</jdbcConnection>
+<!-- 		 -->
+		
+<!-- 		<jdbcConnection driverClass="com.mysql.jdbc.Driver" -->
+<!-- 			connectionURL="jdbc:mysql://172.28.3.71:3306/yybgrk-prod" userId="user_consumer" -->
+<!-- 			password="123123"> -->
+<!-- 		</jdbcConnection> -->
+		
+ 
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<!-- 生成模型的包名和位置 -->
+		<javaModelGenerator targetPackage="com.mljr.bgrk.model" targetProject="../../../../../bgrk-api/src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!-- 生成映射文件的包名和位置 -->
+		<sqlMapGenerator targetPackage="com.mljr.bgrk.mapper" targetProject="../../resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<!-- 生成DAO的包名和位置 -->
+		<!-- type=ANNOTATEDMAPPER 或 XMLMAPPER -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.mljr.bgrk.dao" targetProject="../../java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<!-- 要生成哪些表 -->  
+		<!--sqlStatement 数据库语句，可以为 MySql ，DB2 ,SqlServer , SyBase 等  -->
+		<!-- 插入自动返回ID.配置 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />  
+			useActualColumnNames   true:使用mysql字段名. false:使用mysql字段转换的驼峰命名
+			-->
+			
+			
+		<!-- 所有放在此执行-->
+				
+ 		
+ 		<table tableName="t_ly_rule_result" domainObjectName="ly.LyRuleResult"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 
+ 		<!-- 
+ 		<table tableName="t_ly_model_rule_result" domainObjectName="ly.LyModelRuleResult"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 
+		
+ 		<table tableName="t_ly_sale" domainObjectName="ly.LySale"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 
+ 		
+ 		<table tableName="t_ly_model_sale" domainObjectName="ly.LyModelSale"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 
+		 -->
+									
+		<!-- <table tableName="t_ins_relation_record" domainObjectName="InsRelationRecord"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 						
+		<table tableName="t_ins_location_result" domainObjectName="InsLocationResult"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 	 -->
+	<!-- 	<table tableName="t_wacai_report_bank_deposit_base" domainObjectName="wacai.WacaiReportBankDepositBase"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 
+ 		
+ 		
+ 		<table tableName="t_wacai_report_bank_deposit_interests" domainObjectName="wacai.WacaiReportBankDepositInterests"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 
+ 		
+ 		
+ 		<table tableName="t_wacai_report_bank_deposit_loans_repayments" domainObjectName="wacai.WacaiReportBankDepositLoansRepayments"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 
+ 		
+ 		
+ 		<table tableName="t_wacai_report_bank_deposit_month_summaries" domainObjectName="wacai.WacaiReportBankDepositMonthSummaries"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 
+ 		
+ 		
+ 		<table tableName="t_wacai_report_bank_deposit_negative_keywords" domainObjectName="wacai.WacaiReportBankDepositNegativeKeywords"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table>  -->
+ 		
+ 						
+		<!-- <table tableName="t_o2o_delivery_middle_val" domainObjectName="o2o.O2ODeliveryMiddleVal"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 			
+			 -->			
+		<!-- <table tableName="t_o2o_delivery_param" domainObjectName="o2o.O2ODeliveryParam"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 	 -->
+ 		
+		<!-- 
+		<table tableName="t_cross_3c_decision_mid_variable" domainObjectName="riskbatch.goods.Cross3CDecisionMidVariable"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 				
+		<table tableName="t_cross_3c_record" domainObjectName="riskbatch.goods.Cross3CRecord"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 					
+		<table tableName="t_cross_cash_loan_param" domainObjectName="riskbatch.CrossCashLoanParam"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 				 -->
+		<!-- 
+		
+		<table tableName="t_third_spend_time" domainObjectName="common.ThirdSpendTime">  
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table>
+		
+		<table tableName="t_cash_middle_val" domainObjectName="cash.CashMiddleVal">  
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table>
+ 		
+ 		<table tableName="t_cash_applicant_info" domainObjectName="cash.CashApplicantInfo">  
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table>
+ 		
+ 		<table tableName="t_cash_account_info" domainObjectName="cash.CashAccountInfo">  
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table>
+ 		
+ 		<table tableName="t_cash_decision_mid_variable" domainObjectName="cash.CashDecisionMidVariable">  
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table>
+ 		
+ 		<table tableName="t_cash_record" domainObjectName="cash.CashRecord">  
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table>
+ 		
+ 		<table tableName="t_cash_rule_result" domainObjectName="cash.CashRuleResult">  
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table>
+			
+ 		<table tableName="t_fraudmetrix_fingerprint" domainObjectName="fraudmetrix.FraudmetrixFingerprint">  
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table>  
+			 
+			
+			
+			
+ 		<table tableName="t_fraudmetrix" domainObjectName="Fraudmetrix"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="fraudmetrix_id" sqlStatement="MySql"  identity="true"  />
+ 		</table>  
+			
+			
+ 		<table tableName="t_ff_middle_val" domainObjectName="FfMiddleVal"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>  
+ 		<table tableName="t_mall_result" domainObjectName="MallResult"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>  
+		
+ 		<table tableName="t_neo4j_first_order_result" domainObjectName="neo4j.Neo4jFirstOrderResult">  
+ 			<property name="useActualColumnNames" value="true" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table>
+ 		<table tableName="t_neo4j_second_order_result" domainObjectName="neo4j.Neo4jSecondOrderResult">  
+ 			<property name="useActualColumnNames" value="true" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table>	
+		
+ 		<table tableName="t_fraudmetrix_fingerprint" domainObjectName="fraudmetrix.FraudmetrixFingerprint">  
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table>
+ 		<table tableName="t_mall_auto_adjust_param" domainObjectName="mall.MallAutoAdjustParam">  
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table>
+ 		<table tableName="batch_job_result" domainObjectName="BatchJobResult">  
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table>
+ 		
+ 		<table tableName="t_mall_bill" domainObjectName="MallBatchBill">  
+ 			<property name="useActualColumnNames" value="false" /> 
+   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> 
+ 		</table> 
+ 		
+ 		<table tableName="t_mall_flag2_import" domainObjectName="MallFlagTwoImport"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+  			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>  
+ 		
+ 		<table tableName="t_mall_flag3_import" domainObjectName="MallFlagThreeImport"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+  			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table> 
+ 		<table tableName="t_mall_flag4_import" domainObjectName="MallFlagFourImport"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+  			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>
+ 		<table tableName="t_mall_flag5_import" domainObjectName="MallFlagFiveImport"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+  			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>  
+ 		<table tableName="t_mall_hby_data_rg_v_import" domainObjectName="MallHbyDataImport"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+  			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>
+ 		
+ 		 -->
+		
+ <!-- 		
+		<table tableName="t_ly_model_record" domainObjectName="LyModelRecord"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+  			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table> 
+		<table tableName="t_ly_record" domainObjectName="LyRecord"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+  			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table> 
+		<table tableName="t_ly_middle_val" domainObjectName="LyMiddleVal"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+  			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>   -->
+<!--  		<table tableName="t_ly_rule_result" domainObjectName="LyRuleResult"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+  			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>  
+ 		<table tableName="t_ly_model_rule_result" domainObjectName="LyModelRuleResult"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+  			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>  
+ 		<table tableName="t_ly_score_model" domainObjectName="LyScoreModel"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+  			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>   -->
+		
+		
+		<!-- <table tableName="t_ly_model_applicant" domainObjectName="LyModelApplicant"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>  
+		<table tableName="t_ly_model_applicant_spouse" domainObjectName="LyModelApplicantSpouse"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>
+		<table tableName="t_ly_model_application" domainObjectName="LyModelApplication"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>
+		<table tableName="t_ly_model_car" domainObjectName="LyModelCar"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>
+		<table tableName="t_ly_model_dealer_company" domainObjectName="LyModelDealerCompany"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>
+		<table tableName="t_ly_model_guarantee" domainObjectName="LyModelGuarantee"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>
+		<table tableName="t_ly_model_middle_val" domainObjectName="LyModelMiddleVal"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>
+		<table tableName="t_ly_model_record" domainObjectName="LyModelRecord"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>
+		<table tableName="t_ly_model_store" domainObjectName="LyModelStore"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>
+		<table tableName="t_ly_model_rule_result" domainObjectName="LyModelRuleResult"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table> -->
+ 		
+ 		
+ 		
+
+<!-- 
+		<table tableName="t_cpcs_phone_org" domainObjectName="CpcsPhoneOrg"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>   
+		<table tableName="t_cpcs_phone_other" domainObjectName="CpcsPhoneOther"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>   
+		   -->
+		<!--
+ 		<table tableName="t_ff_strategy_workflow" domainObjectName="FfStrategyWorkflow"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+  			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>  
+		
+ 		<table tableName="t_ff_city_workflow" domainObjectName="FfCityWorkflow"> 
+ 			<property name="useActualColumnNames" value="false" /> 
+  			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />
+ 		</table>  
+		 
+ 		<table tableName="m_fraudmetrix_afterloan_user" domainObjectName="FraudmetrixAfterLoanUser"
+ 			enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"> 
+			<property name="useActualColumnNames" value="false" /> 
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			
+ 		</table>  
+		-->
+		
+		
+<!--  		<table tableName="t_zm_feedback_data" domainObjectName="zm.ZmFeedbackData">  -->
+<!--  			<property name="useActualColumnNames" value="false" />  -->
+<!--   			<generatedKey column="id" sqlStatement="MySql"  identity="true"  /> -->
+<!--  		</table>   -->
+		 
+ 		
+			<!-- 同盾贷后表格 -->
+			<!-- 监控名单 --> 
+<!--  		<table tableName="t_fraudmetrix_afterloan_user" domainObjectName="FraudmetrixAfterLoanUser" -->
+<!--  			enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">  -->
+<!-- 			<property name="useActualColumnNames" value="false" />  -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!--  		</table>  -->
+			<!--监控结果 -->
+<!--  		 <table tableName="t_fraudmetrix_afterloan_result" domainObjectName="FraudmetrixAfterLoanResult" -->
+<!-- 			enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">  -->
+<!-- 			<property name="useActualColumnNames" value="false" />  -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!--  		</table>  -->
+			<!--监控结果详情 -->
+<!--  		<table tableName="t_fraudmetrix_afterloan_result_riskdetail" domainObjectName="FraudmetrixAfterLoanResultRiskDetail" -->
+<!--  			enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">  -->
+<!-- 			<property name="useActualColumnNames" value="false" />  -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!--  		</table> -->
+		<!-- 同盾贷后监控核心参数 -->  		 	
+<!--    		<table tableName="t_core_contractinfo_param" domainObjectName="CoreContractInfo" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>  		 	 -->
+ 		
+
+	<!-- 征信报告 -->
+	    <!-- 总表  -->
+<!--    		<table tableName="t_creditreport" domainObjectName="cr.CreditReport" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>  		 	 -->
+	
+ 		<!-- 身份信息表 -->
+<!--    		<table tableName="t_cr_identify" domainObjectName="cr.CRIdentify" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>  		 	 -->
+		
+ 		<!-- 配偶信息表-->
+<!--    		<table tableName="t_cr_spouse" domainObjectName="cr.CRSpouse" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table> 			 -->
+		
+ 		<!-- 居住信息表-->
+<!--    		<table tableName="t_cr_residence" domainObjectName="cr.CRResidence" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table> 	 -->
+		
+ 		<!-- 职业信息-工作单位表-->
+<!--    		<table tableName="t_cr_occupation" domainObjectName="cr.CROccupation" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table> 		 -->
+		
+ 		<!-- 职业信息职务类表-->
+<!--    		<table tableName="t_cr_occupation_detail" domainObjectName="cr.CROccupationDetail" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table> 		 -->
+		
+ 		<!-- 信用提示表 -->
+<!--    		<table tableName="t_cr_credit_tips" domainObjectName="cr.CRCreditTips" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>	 -->
+		
+ 		<!-- 逾期(透支)信息汇总表-->
+<!--    		<table tableName="t_cr_overdue_tips" domainObjectName="cr.CROverdueTips" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table> -->
+		
+ 		<!-- 未结清贷款信息表-->
+<!--    		<table tableName="t_cr_uncleared_loan" domainObjectName="cr.CRUnclearedLoan" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>		 -->
+		
+ 		<!-- 未销户贷记卡信息表 -->
+<!--    		<table tableName="t_cr_unclosed_creditcard" domainObjectName="cr.CRUnclosedCreditCard" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>		 -->
+	
+	
+ 		<!-- 未销户贷记卡信息表 -->
+<!--    		<table tableName="t_cr_unclosed_semi_creditcard" domainObjectName="cr.CRUnclosedSemiCreditCard" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>		 -->
+		
+ 		<!-- 贷款信息表 -->
+<!--    		<table tableName="t_cr_loan" domainObjectName="cr.CRLoan" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>	 -->
+		
+ 		<!--贷款概要详情表-->
+<!--    		<table tableName="t_cr_loan_summary_detail" domainObjectName="cr.CRLoanSummaryDetail"
+  	 		enableCountByExample="false" enableDeleteByExample="false" 
+  	 		enableSelectByExample="false" enableUpdateByExample="false">
+			<property name="useActualColumnNames" value="false" />
+			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			
+		</table> -->
+		
+ 		<!--贷款逾期记录表-->
+<!--    		<table tableName="t_cr_loan_overdue_record" domainObjectName="cr.CRLoanOverdueRecord" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>		 -->
+		
+ 		<!--贷款特殊交易记录表-->
+<!--    		<table tableName="t_cr_loan_special_record" domainObjectName="cr.CRLoanSpecialRecord" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>			 -->
+		
+ 		<!--贷记卡信息表-->
+<!--    		<table tableName="t_cr_creditcard" domainObjectName="cr.CRCreditCard" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>			 -->
+		
+ 		<!--贷记卡概要明细表-->
+<!--    		<table tableName="t_cr_creditcard_summary_detail" domainObjectName="cr.CRCreditCardSummaryDetail" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>			 -->
+		
+ 		<!--贷记卡逾期记录表-->
+<!--    		<table tableName="t_cr_creditcard_overdue_record" domainObjectName="cr.CRCreditCardOverdueRecord" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>					 -->
+
+ 		<!--准贷记卡信息表-->
+<!--    		<table tableName="t_cr_semi_creditcard" domainObjectName="cr.CRSemiCreditCard" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>	 -->
+
+ 		<!--准贷记卡概要明细表-->
+<!--    		<table tableName="t_cr_semi_creditcard_sum_detail" domainObjectName="cr.CRSemiCreditCardSumDetail" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>		 -->
+			
+ 		<!--住房公积金缴费信息表-->
+<!--    		<table tableName="t_cr_housing_fund_pay_info" domainObjectName="cr.CRHousingFundPayInfo" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>	 -->
+		
+ 		<!--住房公积金缴费单位记录表-->
+<!--    		<table tableName="t_cr_housing_fund_pay_company" domainObjectName="cr.CRHousingFundPayCompany" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table>	 -->
+
+ 		<!--养老保险金缴费信息表-->
+<!--    		<table tableName="t_cr_endow_insurance_pay_info" domainObjectName="cr.CREndowInsurancePayInfo" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table> -->
+
+ 		<!--养老保险金缴费单位记录表-->
+<!--    		<table tableName="t_cr_endow_insurance_pay_company" domainObjectName="cr.CREndowInsurancePayCompany" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table> -->
+
+ 		<!--对外贷款担保记录表-->
+<!--    		<table tableName="t_cr_outloan_guarantee" domainObjectName="cr.CROutloanGuarantee" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table> -->
+
+ 		<!--查询记录汇总记录表-->
+<!--    		<table tableName="t_cr_query_summary" domainObjectName="cr.CRQuerySummary" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table> -->
+
+ 		<!--信贷审批查询记录明细表-->
+<!--    		<table tableName="t_cr_query_detail" domainObjectName="cr.CRQueryDetail" -->
+<!--   	 		enableCountByExample="false" enableDeleteByExample="false"  -->
+<!--   	 		enableSelectByExample="false" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="false" /> -->
+<!-- 			<generatedKey column="id" sqlStatement="MySql"  identity="true"  />			 -->
+<!-- 		</table> -->						
+	</context>
+</generatorConfiguration>  
